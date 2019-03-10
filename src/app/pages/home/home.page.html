@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Aterro Chat
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h4>Aterre seus memes, aterre suas mágoas com seus amigos.</h4>
+
+  <div class="user-form">
+    <h5>Entre com seu e-mail e senha ou <span (click)="changeBoxUser()">cadastre-se.</span></h5>
+    <form id="box-login" #userLoginForm="ngForm">
+      <ion-item>
+        <ion-input required type="email" [(ngModel)]="user.email" id="email" name="email" placeholder="E-mail"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input required type="password" [(ngModel)]="user.password" id="password" name="password  " placeholder="Senha"></ion-input>
+      </ion-item>
+      <div class="user-form__action">
+        <ion-button [disabled]="!userLoginForm.form.valid" (click)="loginUser()">Logar</ion-button>
+      </div>
+    </form>
+    <form id="box-register" #userRegisterForm="ngForm" class="el-hide">
+      <ion-item>
+        <ion-input required type="text" [(ngModel)]="user.name" id="name" name="name" placeholder="Nome"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input required type="text" [(ngModel)]="user.lastname" id="lastname" name="lastname" placeholder="Sobrenome"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input required type="email" [(ngModel)]="user.email" id="email" name="email" placeholder="E-mail"></ion-input>
+      </ion-item>
+      <span class="error-text">{{ emailError }}</span>
+      <ion-item>
+        <ion-input required type="password" [(ngModel)]="user.password" id="password" name="password  " placeholder="Senha"></ion-input>
+      </ion-item>
+      <div class="user-form__action">
+        <ion-button [disabled]="!userRegisterForm.form.valid" (click)="registerUser()">Registrar</ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>

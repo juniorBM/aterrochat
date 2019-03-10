@@ -1,0 +1,7 @@
+{
+  "name": "aterro-chat",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

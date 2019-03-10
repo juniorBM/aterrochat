@@ -1,0 +1,16 @@
+h4 {
+    text-align: center;
+}
+.user-form {
+    margin-top: 30px;
+    h5 {
+        text-align: center;
+        span {
+            font-weight: bold;
+        }
+    }
+    &__action {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
